@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/home_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_centerInParent="true">
+        <Button
+            android:id="@+id/registration"
+            android:layout_width="wrap_content"
+            android:text="Регистрация"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:text="LogIn"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <include
+        android:id="@+id/registration_layout"
+        android:visibility="gone"
+        layout="@layout/user_registration"/>
+    <include
+        android:id="@+id/login_layout"
+        android:visibility="gone"
+        layout="@layout/login"/>
+
+</RelativeLayout>
+
+
+
