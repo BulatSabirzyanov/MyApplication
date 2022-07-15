@@ -5,9 +5,19 @@
     android:layout_margin="15dp"
     android:layout_height="match_parent">
     <EditText
-        android:id="@+id/registr_name"
+        android:id="@+id/registr_username"
         android:layout_width="match_parent"
         android:hint="Username"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/registr_name"
+        android:layout_width="match_parent"
+        android:hint="Name"
+        android:layout_height="wrap_content"/>
+    <EditText
+        android:id="@+id/registr_surname"
+        android:layout_width="match_parent"
+        android:hint="Surname"
         android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/registr_email"
@@ -20,10 +30,9 @@
         android:hint="Password"
         android:layout_height="wrap_content"/>
     <Button
+        android:id="@+id/save_button"
         android:layout_width="match_parent"
         android:text="Save"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"/>
-
-
 </LinearLayout>

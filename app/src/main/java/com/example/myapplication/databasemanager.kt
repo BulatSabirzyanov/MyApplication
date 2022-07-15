@@ -5,23 +5,21 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 
-class DbManager(context: Context) {
-    val DatabaseHelper= DatabaseHelper(context)
+class Databasemanager(context: Context) {
+    val databaseHelper= DatabaseHelper(context)
     var db: SQLiteDatabase? = null
 
-    fun openDb(){
-        db = DatabaseHelper.writableDatabase
-    }
-
-    fun addUser(username: String, email: String, password: String){
+    fun createUser(username: String, name: String, surname: String, email: String, password: String){
+        db = databaseHelper.writableDatabase
         val values = ContentValues().apply {
             put(DatabaseClass.COLUMN_NAME_USERNAME, username)
+            put(DatabaseClass.COLUMN_NAME_NAME, name)
+            put(DatabaseClass.COLUMN_NAME_SURNAME, surname)
             put(DatabaseClass.COLUMN_NAME_EMAIL, email)
             put(DatabaseClass.COLUMN_NAME_PASSWORD, password)
         }
         db?.insert(DatabaseClass.TABLE_NAME, null, values)
     }
-
     @SuppressLint("Range")
     fun getUserData(email: String): ArrayList<String> {
         val data = ArrayList<String>()
@@ -34,12 +32,16 @@ class DbManager(context: Context) {
                 val username =
                     cursor?.getString(cursor.getColumnIndex(DatabaseClass.COLUMN_NAME_USERNAME))
                         .toString()
+                val name = cursor?.getColumnName(cursor.getColumnIndex(DatabaseClass.COLUMN_NAME_NAME)).toString()
+                val surname = cursor?.getColumnName(cursor.getColumnIndex(DatabaseClass.COLUMN_NAME_SURNAME)).toString()
                 val email =
                     cursor?.getString(cursor.getColumnIndex(DatabaseClass.COLUMN_NAME_EMAIL)).toString()
                 val password =
                     cursor?.getString(cursor.getColumnIndex(DatabaseClass.COLUMN_NAME_PASSWORD))
                         .toString()
                 data.add(username)
+                data.add(name)
+                data.add(surname)
                 data.add(email)
                 data.add(password)
             }
@@ -47,16 +49,13 @@ class DbManager(context: Context) {
             data.add("")
             data.add("")
             data.add("")
+            data.add("")
+            data.add("")
         }
         return data
     }
 
-    fun correctPassword(email: String, password: String): Boolean{
-        val data = getUserData(email)
-        return password == data[2]
-    }
-
     fun closeDb(){
-        DatabaseHelper.close()
+        databaseHelper.close()
     }
 }

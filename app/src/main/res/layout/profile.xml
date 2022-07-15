@@ -5,42 +5,35 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="my page" />
+        android:text="Profile" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/usernametextView"
         android:layout_width="234dp"
         android:layout_height="42dp"
-        android:hint="name" />
+        android:text="Name" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/nametextView"
+        android:layout_width="234dp"
+        android:layout_height="42dp"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/surnametextView"
         android:layout_width="234dp"
         android:layout_height="43dp"
-        android:hint="surname" />
+        android:text="Surname" />
 
-    <EditText
-        android:id="@+id/editTextTextEmailAddress"
+    <TextView
+        android:id="@+id/emailtextView"
         android:layout_width="234dp"
-        android:layout_height="77dp"
-        android:ems="10"
-        android:hint="email"
-        android:inputType="textEmailAddress" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ввести данные" />
-
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="Email" />
 </LinearLayout>

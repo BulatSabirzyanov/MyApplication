@@ -14,12 +14,12 @@
         android:gravity="center"
         android:layout_centerInParent="true">
         <Button
-            android:id="@+id/registration"
+            android:id="@+id/registration_button"
             android:layout_width="wrap_content"
-            android:text="Регистрация"
+            android:text="Registration"
             android:layout_height="wrap_content" />
         <Button
-            android:id="@+id/login"
+            android:id="@+id/login_button_in_home_layout"
             android:layout_width="wrap_content"
             android:text="LogIn"
             android:layout_height="wrap_content" />
@@ -32,7 +32,10 @@
         android:id="@+id/login_layout"
         android:visibility="gone"
         layout="@layout/login"/>
-
+    <include
+        android:id="@+id/profile_layout"
+        android:visibility="gone"
+        layout="@layout/profile"/>
 </RelativeLayout>
 
 
