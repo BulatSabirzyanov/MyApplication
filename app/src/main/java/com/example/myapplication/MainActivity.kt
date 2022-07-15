@@ -8,6 +8,8 @@ import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.Toast
 
+
+
 class MainActivity : AppCompatActivity() {
     private lateinit var  registration_layout:Button
     private lateinit var login_layout:Button
@@ -16,8 +18,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var login:Button
     private  lateinit var save:Button
     private  lateinit var login_button:Button
-
-
+    private lateinit var profile_layout:Button
 
     private lateinit var handler: DatabaseHelper
 
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
         registration.setOnClickListener{
             showRegistration()
         }
+
 
         login.setOnClickListener{
             showLogIN()
@@ -63,18 +65,24 @@ class MainActivity : AppCompatActivity() {
         registration_layout.visibility = View.VISIBLE
         login_layout.visibility = View.GONE
         home_layout.visibility = View.GONE
-
+        profile_layout.visibility = View.GONE
     }
     private fun showLogIN(){
         registration_layout.visibility = View.GONE
         login_layout.visibility = View.VISIBLE
         home_layout.visibility = View.GONE
-
+        profile_layout.visibility = View.GONE
     }
     private fun showHome(){
         registration_layout.visibility = View.GONE
         login_layout.visibility = View.GONE
         home_layout.visibility = View.VISIBLE
-
+        profile_layout.visibility = View.GONE
+    }
+    private fun showProfile(){
+        registration_layout.visibility=View.GONE
+        login_layout.visibility=View.GONE
+        home_layout.visibility=View.GONE
+        profile_layout.visibility = View.VISIBLE
     }
 }
