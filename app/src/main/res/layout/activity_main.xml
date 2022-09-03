@@ -4,38 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#C8B1F1"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/home_ll"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/container"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_centerInParent="true">
-        <Button
-            android:id="@+id/registration_button"
-            android:layout_width="wrap_content"
-            android:text="Registration"
-            android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/login_button_in_home_layout"
-            android:layout_width="wrap_content"
-            android:text="LogIn"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-    <include
-        android:id="@+id/registration_layout"
-        android:visibility="gone"
-        layout="@layout/user_registration"/>
-    <include
-        android:id="@+id/login_layout"
-        android:visibility="gone"
-        layout="@layout/login"/>
-    <include
-        android:id="@+id/profile_layout"
-        android:visibility="gone"
-        layout="@layout/profile"/>
+        android:layout_height="match_parent"
+        app:navGraph="@navigation/nav_graph"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
 </RelativeLayout>
 
 

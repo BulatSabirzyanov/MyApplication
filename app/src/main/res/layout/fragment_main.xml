@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#C7AFF3"
+        android:gravity="center"
+        android:text="кинотека"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
+
+    <LinearLayout
+        android:id="@+id/home_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:alpha="1"
+        android:layout_centerInParent="true">
+        <Button
+            android:id="@+id/registration_button"
+            android:layout_width="wrap_content"
+            android:text="Registration"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"/>
+        <Button
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
+            android:text="LogIn"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+</RelativeLayout>

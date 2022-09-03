@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:alpha="0.5"
+    android:orientation="vertical">
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,19 +17,7 @@
         android:id="@+id/usernametextView"
         android:layout_width="234dp"
         android:layout_height="42dp"
-        android:text="Name" />
-
-    <TextView
-        android:id="@+id/nametextView"
-        android:layout_width="234dp"
-        android:layout_height="42dp"
-        android:text="Name" />
-
-    <TextView
-        android:id="@+id/surnametextView"
-        android:layout_width="234dp"
-        android:layout_height="43dp"
-        android:text="Surname" />
+        android:text="Username" />
 
     <TextView
         android:id="@+id/emailtextView"
@@ -36,4 +26,10 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="Email" />
+
+    <Button
+        android:id="@+id/films_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="мои фильмы" />
 </LinearLayout>
